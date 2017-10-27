@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+
+
+<script>	
+	function Save(){
+
+window.localStorage['fname'] = document.getElementById('fname') .value;
+document.getElementById('fname').value=null
+window.localStorage['lname'] = document.getElementById('lname') .value;
+document.getElementById('lname').value=null
+	
+window.localStorage['email'] = document.getElementById('email') .value;
+document.getElementById('email').value=null
+window.localStorage['num'] = document.getElementById('num') .value;
+document.getElementById('num').value=null
+
+window.localStorage['add'] = document.getElementById('add') .value;
+document.getElementById('add').value=null
+
+window.localStorage['Report'] = document.getElementById('Report') .value;
+document.getElementById('Report').value=null
+
+
+}
+</script>
+<body  background="png.png"> 
+<style>
+	input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 50%;
+    }
+}
+
+
+</style>
+
+<fieldset>
+<center>
+<h2 align="center">Report</h2>
+	<label>First Name &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="fname" placeholder="Enter First Name"></label><br>
+	<br>
+	<label>Last Name &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="lname" placeholder="Enter Last name"></label><br>
+	<br>
+	<label>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="email" placeholder="Enter email"></label><br>
+	<br>
+	<label>Number &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num" placeholder="Enter your contact number"></label><br>
+	<br>
+	<label>Address &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="add" placeholder="Enter your address"></label><br>
+	<br>
+	<label>Report &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="Report" placeholder="Enter Report:"></label><br>
+	<br>	
+
+
+<br><br>
+<input type="submit" value="Save" onclick="Save()">
+</center>
+</fieldset>
+</body>
+</html>
